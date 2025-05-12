@@ -1,0 +1,98 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9e3f0;
+    /* light blue/gray from Canva */
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333366;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #333366;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: #333366;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #333366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555599;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
