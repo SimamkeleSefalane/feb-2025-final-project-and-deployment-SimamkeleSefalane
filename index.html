@@ -4,8 +4,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simamkele Sefalane | Portfolio</title>
+    <title>Home | Simamkele Sefalane</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .projects {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card .btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+            margin-right: 0.5rem;
+        }
+
+        .project-card .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,8 +90,43 @@
         <section class="hero">
             <div class="hero-text">
                 <h2>Welcome to My Portfolio</h2>
-                <p>Computer Science Graduate | Web Developer | Educator</p>
-                <a href="projects.html" class="btn">View Projects</a>
+                <p>PRA Developer | Web Developer | System Support Technician </p>
+                <a href="about.html" class="btn">Who I Am</a>
+                <a href="contact.html" class="btn">Get In Touch</a>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/hr-compliance.png" alt="HR Compliance App">
+                    <h3>HR Compliance App</h3>
+                    <p>A canvas HR Compliance app in Power Platform. Any organization can use this app to ensure all
+                        employees understand and are fully aware of the organization’s policies and procedures, and
+                        receive training when these policies are updated.</p>
+                    <span class="tech-badge">Built with Power Platform</span>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/kid-ready.png" alt="Kid Ready App">
+
+                    <h3>Kid Ready</h3>
+                    <p>A mental health mobile app focused on Early Childhood Development (ECD). Its goal is to bring
+                        parents and teachers together to support each other in the well-being of their children.</p>
+                    <a href="docs/kid-ready-case-study.pdf" class="btn" target="_blank">Read Case Study</a>
+                    <a href="https://github.com/AshtonPadiachy/Soteria.git" class="btn" target="_blank">GitHub</a>
+
+                </div>
+
+                <div class="project-card">
+                    <img src="images/career-path-finder.png" alt="Career Path Finder App">
+                    <h3>Career Path Finder App</h3>
+                    <p>Helping high school students and first year varsity students choose subjects and courses that
+                        will lead to great career paths.</p>
+                    <a href="docs/Varsity Ready.pdf" class="btn" target="_blank">Read Case Study</a>
+
+                </div>
             </div>
         </section>
     </main>

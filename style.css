@@ -66,6 +66,127 @@ body {
     transition: background-color 0.3s;
 }
 
+.tech-badge {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Card container layout */
+.education-grid,
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card styling */
+.education-card,
+.certificate-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover,
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography inside cards */
+.education-card h3,
+.certificate-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.education-card p,
+.certificate-card p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.education-section,
+.certificates-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.education-section h2,
+.certificates-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive image scaling */
+@media (max-width: 768px) {
+    .project-card img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card img {
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card img {
+        max-height: 120px;
+    }
+}
+
 .btn:hover {
     background-color: #555599;
 }
@@ -95,4 +216,6 @@ footer {
         width: 100%;
         padding: 1rem;
     }
+
+
 }
