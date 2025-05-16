@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
     color: #000000;
+    background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
 }
 
 /* Navbar */
@@ -12,7 +13,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #d9e3f0;
-    /* light blue/gray from Canva */
     padding: 1rem 2rem;
 }
 
@@ -66,64 +66,192 @@ body {
     transition: background-color 0.3s;
 }
 
+.btn:hover {
+    background-color: #555599;
+}
+
 .tech-badge {
     display: inline-block;
     background-color: #28a745;
     color: white;
-    padding: 0.3rem 0.7rem;
-    font-size: 0.8rem;
-    border-radius: 0.4rem;
-    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    /* Same as .btn */
+    font-size: 1rem;
+    /* Match .btn text size */
+    border-radius: 5px;
+    /* Match .btn border radius */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
 }
 
-.project-card {
-    background: white;
+.services-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #333366;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 2rem;
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    max-width: 350px;
-    margin: 0 auto;
-    font-size: 0.95rem;
+    text-align: left;
 }
 
-.project-card:hover {
+
+
+.service-card:hover {
     transform: translateY(-5px);
 }
 
-.project-card h3 {
+.service-card h3 {
+    color: #333366;
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-.project-card p {
-    font-size: 0.95rem;
-    color: #333;
+.service-card p {
+    font-size: 1rem;
+    color: #555;
 }
 
-.project-card img {
+
+.journey-image {
+    width: 20%;
+    max-width: 600px;
+    /* Adjust this value as needed */
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    /* centers the image */
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.blog-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
     width: 100%;
-    max-height: 200px;
+}
+
+.blog-card a {
+    color: inherit;
+    text-decoration: underline;
+
+}
+
+.blog-card a:hover {
+    text-decoration: none;
+    color: #333366;
+    /* Change color on hover */
+}
+
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333366;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    /* or adjust as needed */
     object-fit: cover;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
 
-/* Card container layout */
-.education-grid,
-.certificates-grid {
+.blog-card .btn {
+    margin-top: auto;
+    padding: 0.6rem 1.2rem;
+    background-color: #333366;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.blog-card .btn:hover {
+    background-color: #555599;
+}
+
+/* Education Section (cards side-by-side) */
+.education-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.education-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Card styling */
-.education-card,
-.certificate-card {
+.education-card {
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -131,35 +259,18 @@ body {
     transition: transform 0.3s ease;
 }
 
-.education-card:hover,
-.certificate-card:hover {
+.education-card:hover {
     transform: translateY(-5px);
 }
 
-/* Typography inside cards */
-.education-card h3,
-.certificate-card h3 {
+.education-card h3 {
     margin-top: 0;
     font-size: 1.2rem;
 }
 
-.education-card p,
-.certificate-card p {
+.education-card p {
     color: #555;
     margin-bottom: 0.5rem;
-}
-
-.education-section,
-.certificates-section {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
-}
-
-.education-section h2,
-.certificates-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 /* Responsive image scaling */
@@ -175,22 +286,6 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .project-card img {
-        max-height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-card img {
-        max-height: 120px;
-    }
-}
-
-.btn:hover {
-    background-color: #555599;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -201,7 +296,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive */
+/* Mobile Nav + Buttons */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -218,4 +313,75 @@ footer {
     }
 
 
+}
+
+/* Grouped Buttons for Blog Cards */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+    /* Aligns them to the left */
+}
+
+/* Keeps buttons aligned left */
+
+
+.btn-group .btn {
+    white-space: nowrap;
+}
+
+.welcome-enhanced {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.typing-text {
+    font-weight: bold;
+    color: #6a0dad;
+    font-size: 1.3rem;
+}
+
+.cta-buttons {
+    margin-top: 1rem;
+}
+
+.cta-buttons .btn {
+    margin: 0.3rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #4b0082;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }

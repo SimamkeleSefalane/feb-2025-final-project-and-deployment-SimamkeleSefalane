@@ -6,72 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Simamkele Sefalane</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-        .projects {
-            padding: 4rem 2rem;
-            background-color: #f9f9f9;
-        }
-
-        .projects h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            color: #333;
-        }
-
-        .project-card img {
-            width: 100%;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card .btn {
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            transition: background-color 0.3s ease;
-            margin-right: 0.5rem;
-        }
-
-        .project-card .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 
 <body>
@@ -81,53 +15,72 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="services">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-text">
-                <h2>Welcome to My Portfolio</h2>
-                <p>PRA Developer | Web Developer | System Support Technician </p>
-                <a href="about.html" class="btn">Who I Am</a>
-                <a href="contact.html" class="btn">Get In Touch</a>
+                <h2>Welcome to My Blog Portfolio</h2>
+                <section class="welcome-enhanced fade-in">
+                    <p class="intro-text">
+                        👋 I'm Simamkele Sefalane — a developer and lifelong learner. I created this
+                        blog-portfolio to share my tech journey, showcase real-world projects, and help others break
+                        into
+                        tech.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="about.html" class="btn">About Me</a>
+                        <a href="services.html" class="btn">Services</a>
+                    </div>
+                </section>
             </div>
         </section>
 
-        <section class="projects">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="images/hr-compliance.png" alt="HR Compliance App">
-                    <h3>HR Compliance App</h3>
-                    <p>A canvas HR Compliance app in Power Platform. Any organization can use this app to ensure all
-                        employees understand and are fully aware of the organization’s policies and procedures, and
-                        receive training when these policies are updated.</p>
-                    <span class="tech-badge">Built with Power Platform</span>
-                </div>
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <h2>My Blog Journey</h2>
+            <div class="blog-grid">
 
-                <div class="project-card">
+                <!-- Blog Card 1 -->
+                <div class="blog-card" data-aos="fade-up">
                     <img src="images/kid-ready.png" alt="Kid Ready App">
-
-                    <h3>Kid Ready</h3>
-                    <p>A mental health mobile app focused on Early Childhood Development (ECD). Its goal is to bring
-                        parents and teachers together to support each other in the well-being of their children.</p>
-                    <a href="docs/kid-ready-case-study.pdf" class="btn" target="_blank">Read Case Study</a>
-                    <a href="https://github.com/AshtonPadiachy/Soteria.git" class="btn" target="_blank">GitHub</a>
-                    <a href="docs/kid-ready-project-documentation.pdf" class="btn" target="_blank">Project
-                        Documentation</a>
+                    <h3>Building the Kid Ready App</h3>
+                    <p>A blog about building a mental health app for early childhood development <a
+                            href="kidreadyBlog.html" target="_blank">read more...</a></p>
+                    <div class="btn-group">
+                        <a href="https://github.com/AshtonPadiachy/Soteria.git" class="btn" target="_blank">GitHub</a>
+                        <a href="docs/kid-ready-case-study.pdf" class="btn" target="_blank">Case Study</a>
+                    </div>
                 </div>
 
-                <div class="project-card">
+                <!-- Blog Card 2 -->
+                <div class="blog-card" data-aos="fade-up">
+                    <img src="images/hr-compliance.png" alt="HR Compliance App">
+                    <h3>HR Compliance Platform</h3>
+                    <p>My experience creating a compliance tracking tool using Power Platform <a
+                            href="hrcomplianceBlog.html" target="_blank">read more...</a></p>
+                    <span class="tech-badge">Made with Power Apps</span>
+                    <div class="btn-group">
+                        <a href="docs/hr-compliance-case-study.pdf" class="btn" target="_blank">Case Study</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card" data-aos="fade-up">
                     <img src="images/career-path-finder.png" alt="Career Path Finder App">
-                    <h3>Career Path Finder App</h3>
-                    <p>Helping high school students and first year varsity students choose subjects and courses that
-                        will lead to great career paths.</p>
-                    <a href="docs/Varsity Ready.pdf" class="btn" target="_blank">Read Case Study</a>
-
+                    <h3>Career Path Finder</h3>
+                    <p>Helping students align subjects with career paths — lessons I learned <a
+                            href="careerpathfinderBlog.html" target="_blank">read more...</a></p>
+                    <div class="btn-group">
+                        <a href="docs/Varsity Ready.pdf" class="btn" target="_blank">Case Study</a>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -137,6 +90,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const roles = ["Web Developer", "Tech Blogger", "Python Enthusiast", "Educator"];
+        let i = 0, j = 0, isDeleting = false;
+        const typingSpan = document.getElementById("typing-text");
+
+        function type() {
+            const current = roles[i];
+            typingSpan.textContent = isDeleting ? current.slice(0, j--) : current.slice(0, j++);
+
+            if (!isDeleting && j === current.length) {
+                isDeleting = true;
+                setTimeout(type, 1000);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % roles.length;
+            }
+
+            setTimeout(type, isDeleting ? 50 : 120);
+        }
+
+        type();
+    </script>
+
 </body>
 
 </html>
